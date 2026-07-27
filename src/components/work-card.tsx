@@ -3,7 +3,15 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Work } from "@/lib/works";
 
-export function WorkCard({ work, priority = false }: { work: Work; priority?: boolean }) {
+export function WorkCard({
+  work,
+  priority = false,
+  index,
+}: {
+  work: Work;
+  priority?: boolean;
+  index?: number;
+}) {
   const locale = useLocale() as "uk" | "en";
   const t = useTranslations("works");
   const cover = work.gallery[0];
@@ -23,6 +31,14 @@ export function WorkCard({ work, priority = false }: { work: Work; priority?: bo
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/10" />
+        {typeof index === "number" && (
+          <span className="absolute left-4 top-4 font-display text-sm italic text-white/80 mix-blend-difference">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        )}
+        <span className="absolute bottom-0 left-0 translate-y-full bg-accent px-3 py-1 text-xs uppercase tracking-[0.2em] text-background transition-transform duration-500 ease-out group-hover:translate-y-0">
+          {work.category[locale]}
+        </span>
       </div>
       <div className="mt-4 flex items-start justify-between gap-4">
         <div>

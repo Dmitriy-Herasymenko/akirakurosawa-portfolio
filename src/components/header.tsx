@@ -11,6 +11,7 @@ import { siteConfig } from "@/lib/site-config";
 const links = [
   { href: "/" as const, key: "home" },
   { href: "/works" as const, key: "works" },
+  { href: "/services" as const, key: "services" },
   { href: "/about" as const, key: "about" },
   { href: "/contact" as const, key: "contact" },
 ];

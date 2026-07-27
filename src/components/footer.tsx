@@ -37,6 +37,12 @@ export function Footer() {
                 {tNav("works")}
               </Link>
               <Link
+                href="/services"
+                className="opacity-80 transition-opacity hover:opacity-100"
+              >
+                {tNav("services")}
+              </Link>
+              <Link
                 href="/about"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/reveal";
+import { Kicker } from "@/components/kicker";
 import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -46,9 +47,7 @@ export default async function AboutPage({
     <div>
       <section className="container-page grid grid-cols-1 gap-10 pt-16 sm:pt-24 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.3em] text-muted">
-            {t("kicker")}
-          </p>
+          <Kicker>{t("kicker")}</Kicker>
           <h1 className="mt-3 font-display text-4xl italic sm:text-6xl">
             {t("heading")}
           </h1>

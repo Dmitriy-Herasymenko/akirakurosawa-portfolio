@@ -15,11 +15,16 @@
     "contact": {
       "title": "Contact",
       "description": "Get in touch to book a shoot or collaborate."
+    },
+    "services": {
+      "title": "Services & Pricing",
+      "description": "Photography packages, pricing, and answers to frequent questions."
     }
   },
   "nav": {
     "home": "Home",
     "works": "Works",
+    "services": "Services",
     "about": "About",
     "contact": "Contact",
     "menu": "Menu",
@@ -48,7 +53,30 @@
     "contactKicker": "Collaboration",
     "contactHeading": "Have a project in mind?",
     "contactText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "contactCta": "Get in touch"
+    "contactCta": "Get in touch",
+    "marquee": [
+      "Portrait",
+      "Landscape",
+      "Street",
+      "Editorial",
+      "Campaigns",
+      "Interior"
+    ],
+    "stats": [
+      { "value": "12", "label": "Years of experience" },
+      { "value": "140+", "label": "Projects" },
+      { "value": "30+", "label": "Clients" },
+      { "value": "6", "label": "Countries in Europe" }
+    ]
+  },
+  "services": {
+    "kicker": "Services & Pricing",
+    "heading": "Shoot packages",
+    "intro": "Three ways to work together — from a one-on-one portrait to a multi-day campaign. Final pricing is confirmed per project.",
+    "popular": "Popular",
+    "cta": "Discuss a project",
+    "faqKicker": "Questions",
+    "faqHeading": "Frequently asked"
   },
   "works": {
     "kicker": "Portfolio",

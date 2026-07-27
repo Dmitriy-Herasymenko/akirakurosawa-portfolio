@@ -4,6 +4,9 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { WorkCard } from "@/components/work-card";
 import { Reveal } from "@/components/reveal";
+import { Kicker } from "@/components/kicker";
+import { Marquee } from "@/components/marquee";
+import { Stats } from "@/components/stats";
 import { works } from "@/lib/works";
 
 export async function generateMetadata({
@@ -26,6 +29,8 @@ export default async function HomePage({
 
   const t = await getTranslations("home");
   const featured = works.slice(0, 3);
+  const marqueeItems = t.raw("marquee") as string[];
+  const stats = t.raw("stats") as { value: string; label: string }[];
 
   return (
     <div>
@@ -66,12 +71,12 @@ export default async function HomePage({
         </div>
       </section>
 
+      <Marquee items={marqueeItems} />
+
       <section className="container-page py-20 sm:py-28">
         <Reveal className="mb-12 flex flex-col justify-between gap-4 sm:mb-16 sm:flex-row sm:items-end">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-muted">
-              {t("featuredKicker")}
-            </p>
+            <Kicker>{t("featuredKicker")}</Kicker>
             <h2 className="mt-3 font-display text-3xl italic sm:text-4xl">
               {t("cta")}
             </h2>
@@ -87,10 +92,16 @@ export default async function HomePage({
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {featured.map((work, i) => (
             <Reveal key={work.slug} delay={i * 120}>
-              <WorkCard work={work} priority={i === 0} />
+              <WorkCard work={work} priority={i === 0} index={i} />
             </Reveal>
           ))}
         </div>
+      </section>
+
+      <section className="container-page pb-20 sm:pb-28">
+        <Reveal>
+          <Stats items={stats} />
+        </Reveal>
       </section>
 
       <section className="border-t border-foreground/10 bg-surface">
@@ -105,9 +116,7 @@ export default async function HomePage({
             />
           </Reveal>
           <Reveal delay={150} className="flex flex-col justify-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-muted">
-              {t("aboutKicker")}
-            </p>
+            <Kicker>{t("aboutKicker")}</Kicker>
             <h2 className="mt-3 font-display text-3xl italic sm:text-4xl">
               {t("aboutHeading")}
             </h2>
@@ -125,9 +134,10 @@ export default async function HomePage({
 
       <Reveal>
         <section className="container-page py-24 text-center sm:py-32">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted">
+          <div className="mx-auto flex w-fit items-center gap-2 text-xs uppercase tracking-[0.3em] text-muted">
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
             {t("contactKicker")}
-          </p>
+          </div>
           <h2 className="mx-auto mt-4 max-w-2xl text-balance font-display text-3xl italic sm:text-5xl">
             {t("contactHeading")}
           </h2>

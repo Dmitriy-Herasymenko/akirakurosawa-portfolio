@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/reveal";
+import { Kicker } from "@/components/kicker";
 import { siteConfig } from "@/lib/site-config";
 import { buildAlternates } from "@/lib/seo";
 
@@ -32,9 +33,7 @@ export default async function ContactPage({
   return (
     <div className="container-page grid grid-cols-1 gap-14 py-16 sm:py-24 lg:grid-cols-2 lg:gap-24">
       <Reveal>
-        <p className="text-xs uppercase tracking-[0.3em] text-muted">
-          {t("kicker")}
-        </p>
+        <Kicker>{t("kicker")}</Kicker>
         <h1 className="mt-3 font-display text-4xl italic sm:text-6xl">
           {t("heading")}
         </h1>

@@ -7,6 +7,7 @@ import { works } from "@/lib/works";
 type Href =
   | "/"
   | "/works"
+  | "/services"
   | "/about"
   | "/contact"
   | { pathname: "/works/[slug]"; params: { slug: string } };
@@ -32,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = [
     buildEntry("/", 1),
     buildEntry("/works", 0.8),
+    buildEntry("/services", 0.8),
     buildEntry("/about", 0.6),
     buildEntry("/contact", 0.6),
   ];
