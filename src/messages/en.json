@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Akira Kurosawa — Photographer",
+      "description": "Portfolio of photographer Akira Kurosawa: landscape, portrait, and street photography from Kyiv, Ukraine."
+    },
+    "works": {
+      "title": "Works",
+      "description": "A collection of photography projects: landscapes, portraits, and street photography."
+    },
+    "about": {
+      "title": "About",
+      "description": "The story, approach to photography, and equipment of Akira Kurosawa."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch to book a shoot or collaborate."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "works": "Works",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "locale": {
+    "label": "Language"
+  },
+  "home": {
+    "kicker": "Photographer",
+    "heading": "Light, silence\nand a moment held",
+    "intro": "I photograph landscapes, portraits, and the street — chasing stillness within motion and detail within the wide frame.",
+    "cta": "View works",
+    "featuredKicker": "Featured series",
+    "featuredCta": "All works",
+    "aboutKicker": "In short",
+    "aboutHeading": "Twelve years behind the camera",
+    "aboutText": "I work with natural light and minimal intervention in the frame. My goal is to keep the feeling of the moment intact in the photograph.",
+    "aboutCta": "Learn more",
+    "contactKicker": "Collaboration",
+    "contactHeading": "Have a project in mind?",
+    "contactText": "Open to shoots, exhibitions, and editorial work.",
+    "contactCta": "Get in touch"
+  },
+  "works": {
+    "kicker": "Portfolio",
+    "heading": "Works",
+    "intro": "Each series is its own story, captured over a distinct period of time.",
+    "viewProject": "View project",
+    "back": "All works",
+    "nextProject": "Next project",
+    "year": "Year",
+    "category": "Category"
+  },
+  "about": {
+    "kicker": "About",
+    "heading": "Akira Kurosawa",
+    "role": "Photographer",
+    "bio1": "I'm a photographer based in Kyiv, specializing in landscape, portrait, and street photography. For over a decade I've been chasing frames where light becomes the main character.",
+    "bio2": "My work has been published in several independent magazines and shown in group exhibitions across Ukraine. I collaborate with architecture studios, modeling agencies, and private clients.",
+    "bio3": "I believe the best photograph is the one that doesn't look staged. That's why I avoid excessive direction and favor natural light instead.",
+    "philosophyHeading": "Approach",
+    "philosophy1Title": "Natural light",
+    "philosophy1Text": "Minimal artificial lighting, maximum attention to the time of day.",
+    "philosophy2Title": "Honest frame",
+    "philosophy2Text": "Minimal post-processing — preserving the mood of the original moment.",
+    "philosophy3Title": "Stillness in detail",
+    "philosophy3Text": "Looking for calm even in the most dynamic scenes.",
+    "equipmentHeading": "Equipment",
+    "equipmentText": "I shoot on full-frame DSLR and mirrorless cameras with a set of prime lenses. Prints are made on archival matte paper.",
+    "clientsHeading": "Clients & publications",
+    "cta": "Get in touch"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "heading": "Let's talk",
+    "intro": "Open to new projects, shoots, and collaborations. Send a message — I reply within a day.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "socialLabel": "Social",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project",
+      "submit": "Send",
+      "note": "The form will open your email client with a pre-filled message."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top"
+  },
+  "notFound": {
+    "heading": "Page not found",
+    "text": "It may have been moved or removed.",
+    "cta": "Go home"
+  }
+}

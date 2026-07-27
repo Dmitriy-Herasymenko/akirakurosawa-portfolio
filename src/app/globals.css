@@ -1,26 +1,119 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafaf8;
+  --foreground: #131211;
+  --muted: #6b6863;
+  --border: #131211;
+  --border-opacity: 0.1;
+  --surface: #f0efec;
+  --accent: #b5895b;
+}
+
+.dark {
+  --background: #0d0c0b;
+  --foreground: #f2f0ec;
+  --muted: #9a968e;
+  --border: #f2f0ec;
+  --border-opacity: 0.12;
+  --surface: #171614;
+  --accent: #d3a877;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-display);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not(.light) {
+    --background: #0d0c0b;
+    --foreground: #f2f0ec;
+    --muted: #9a968e;
+    --border: #f2f0ec;
+    --border-opacity: 0.12;
+    --surface: #171614;
+    --accent: #d3a877;
   }
+}
+
+* {
+  border-color: color-mix(in oklab, var(--border) calc(var(--border-opacity) * 100%), transparent);
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.container-page {
+  width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-inline: 4rem;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.7s ease both;
+}
+
+a {
+  text-underline-offset: 4px;
+}
+
+img {
+  -webkit-user-drag: none;
 }
