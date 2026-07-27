@@ -69,15 +69,24 @@ export function Header() {
         </div>
       </div>
 
-      {open && (
-        <div className="border-t border-foreground/10 md:hidden">
+      <div
+        className={`grid overflow-hidden border-foreground/10 transition-[grid-template-rows,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${
+          open ? "grid-rows-[1fr] border-t" : "grid-rows-[0fr] border-t-0"
+        }`}
+      >
+        <div className="min-h-0">
           <nav className="container-page flex flex-col gap-1 py-4 text-base">
-            {links.map((link) => (
+            {links.map((link, i) => (
               <NavLink
                 key={link.key}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="py-2 opacity-70 transition-opacity hover:opacity-100"
+                style={{
+                  transitionDelay: open ? `${i * 60}ms` : "0ms",
+                }}
+                className={`py-2 opacity-70 transition-[opacity,transform] duration-300 ease-out hover:opacity-100 ${
+                  open ? "translate-y-0 opacity-70" : "-translate-y-1 opacity-0"
+                }`}
                 activeClassName="opacity-100"
               >
                 {t(link.key)}
@@ -88,7 +97,7 @@ export function Header() {
             </div>
           </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }

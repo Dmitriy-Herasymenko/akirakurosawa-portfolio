@@ -3,10 +3,10 @@ export const siteConfig = {
   shortName: "AK",
   url: "https://akirakurosawa-photo.com",
   email: "hello@akirakurosawa-photo.com",
-  phone: "+380 63 000 00 00",
+  phone: "+48 12 000 00 00",
   location: {
-    uk: "Київ, Україна",
-    en: "Kyiv, Ukraine",
+    uk: "Краків, Європа",
+    en: "Kraków, Europe",
   },
   social: {
     instagram: "https://instagram.com/akirakurosawa.photo",

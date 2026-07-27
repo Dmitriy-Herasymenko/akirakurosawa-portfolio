@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/site-config";
 
@@ -11,6 +11,7 @@ const social = [
 export function Footer() {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
+  const locale = useLocale() as "uk" | "en";
   const year = new Date().getFullYear();
 
   return (
@@ -22,7 +23,7 @@ export function Footer() {
               {siteConfig.name}
             </Link>
             <p className="mt-3 max-w-xs text-sm text-muted">
-              {siteConfig.location.uk}
+              {siteConfig.location[locale]}
             </p>
           </div>
 

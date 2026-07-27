@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { WorkCard } from "@/components/work-card";
+import { Reveal } from "@/components/reveal";
 import { works } from "@/lib/works";
 
 export async function generateMetadata({
@@ -30,7 +31,7 @@ export default async function HomePage({
     <div>
       <section className="relative flex min-h-[calc(100svh-4rem)] items-end overflow-hidden sm:min-h-[calc(100svh-5rem)]">
         <Image
-          src="https://picsum.photos/seed/hero-portfolio/2400/1600"
+          src="https://images.unsplash.com/photo-1676304917549-5c42b40779a2?auto=format&fit=crop&w=2400&q=80"
           alt=""
           fill
           priority
@@ -66,7 +67,7 @@ export default async function HomePage({
       </section>
 
       <section className="container-page py-20 sm:py-28">
-        <div className="mb-12 flex flex-col justify-between gap-4 sm:mb-16 sm:flex-row sm:items-end">
+        <Reveal className="mb-12 flex flex-col justify-between gap-4 sm:mb-16 sm:flex-row sm:items-end">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-muted">
               {t("featuredKicker")}
@@ -81,27 +82,29 @@ export default async function HomePage({
           >
             {t("featuredCta")}
           </Link>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {featured.map((work, i) => (
-            <WorkCard key={work.slug} work={work} priority={i === 0} />
+            <Reveal key={work.slug} delay={i * 120}>
+              <WorkCard work={work} priority={i === 0} />
+            </Reveal>
           ))}
         </div>
       </section>
 
       <section className="border-t border-foreground/10 bg-surface">
         <div className="container-page grid grid-cols-1 gap-10 py-20 sm:py-28 lg:grid-cols-2 lg:gap-20">
-          <div className="relative aspect-[4/5] overflow-hidden">
+          <Reveal className="relative aspect-[4/5] overflow-hidden">
             <Image
-              src="https://picsum.photos/seed/about-teaser/1200/1500"
+              src="https://images.unsplash.com/photo-1578329764194-f011d4e75e43?auto=format&fit=crop&w=1200&q=80"
               alt=""
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
             />
-          </div>
-          <div className="flex flex-col justify-center">
+          </Reveal>
+          <Reveal delay={150} className="flex flex-col justify-center">
             <p className="text-xs uppercase tracking-[0.3em] text-muted">
               {t("aboutKicker")}
             </p>
@@ -116,26 +119,28 @@ export default async function HomePage({
               {t("aboutCta")}
               <span aria-hidden="true">→</span>
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      <section className="container-page py-24 text-center sm:py-32">
-        <p className="text-xs uppercase tracking-[0.3em] text-muted">
-          {t("contactKicker")}
-        </p>
-        <h2 className="mx-auto mt-4 max-w-2xl text-balance font-display text-3xl italic sm:text-5xl">
-          {t("contactHeading")}
-        </h2>
-        <p className="mx-auto mt-4 max-w-md text-muted">{t("contactText")}</p>
-        <Link
-          href="/contact"
-          className="mt-8 inline-flex items-center gap-2 border-b border-current pb-1 text-sm tracking-wide"
-        >
-          {t("contactCta")}
-          <span aria-hidden="true">→</span>
-        </Link>
-      </section>
+      <Reveal>
+        <section className="container-page py-24 text-center sm:py-32">
+          <p className="text-xs uppercase tracking-[0.3em] text-muted">
+            {t("contactKicker")}
+          </p>
+          <h2 className="mx-auto mt-4 max-w-2xl text-balance font-display text-3xl italic sm:text-5xl">
+            {t("contactHeading")}
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-muted">{t("contactText")}</p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-flex items-center gap-2 border-b border-current pb-1 text-sm tracking-wide"
+          >
+            {t("contactCta")}
+            <span aria-hidden="true">→</span>
+          </Link>
+        </section>
+      </Reveal>
     </div>
   );
 }

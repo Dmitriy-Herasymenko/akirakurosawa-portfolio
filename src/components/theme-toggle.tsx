@@ -1,7 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/components/theme-provider";
 import { useTranslations } from "next-intl";
 
 function subscribeNoop() {
@@ -18,10 +18,10 @@ function useHasMounted() {
 
 export function ThemeToggle() {
   const t = useTranslations("theme");
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const mounted = useHasMounted();
 
-  const isDark = mounted && resolvedTheme === "dark";
+  const isDark = mounted && theme === "dark";
 
   return (
     <button

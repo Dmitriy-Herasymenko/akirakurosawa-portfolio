@@ -4,7 +4,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider, themeInitScript } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { JsonLd } from "@/components/json-ld";
@@ -103,8 +103,8 @@ export default async function LocaleLayout({
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Kyiv",
-      addressCountry: "UA",
+      addressLocality: "Kraków",
+      addressCountry: "PL",
     },
     sameAs: [
       siteConfig.social.instagram,
@@ -119,13 +119,11 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="flex min-h-full flex-col bg-background text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider>
           <NextIntlClientProvider>
             <a
               href="#main"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { Reveal } from "@/components/reveal";
 import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -19,11 +20,11 @@ export async function generateMetadata({
 }
 
 const clients = [
-  "Kyiv Post",
-  "Vogue Ukraine",
-  "Kyiv Architecture Biennale",
+  "Vogue Poland",
+  "Kraków Photo Biennale",
   "The Village",
   "L'Officiel",
+  "Elle Poland",
 ];
 
 export default async function AboutPage({
@@ -44,7 +45,7 @@ export default async function AboutPage({
   return (
     <div>
       <section className="container-page grid grid-cols-1 gap-10 pt-16 sm:pt-24 lg:grid-cols-2 lg:gap-20">
-        <div>
+        <Reveal>
           <p className="text-xs uppercase tracking-[0.3em] text-muted">
             {t("kicker")}
           </p>
@@ -66,46 +67,51 @@ export default async function AboutPage({
             {t("cta")}
             <span aria-hidden="true">→</span>
           </Link>
-        </div>
+        </Reveal>
 
-        <div className="relative aspect-[4/5] w-full overflow-hidden bg-surface lg:aspect-auto">
+        <Reveal
+          delay={150}
+          className="relative aspect-[4/5] w-full overflow-hidden bg-surface lg:aspect-auto"
+        >
           <Image
-            src="https://picsum.photos/seed/photographer-portrait/1200/1500"
+            src="https://images.unsplash.com/photo-1578329764194-f011d4e75e43?auto=format&fit=crop&w=1200&q=80"
             alt=""
             fill
             priority
             sizes="(min-width: 1024px) 40vw, 100vw"
             className="object-cover"
           />
-        </div>
+        </Reveal>
       </section>
 
       <section className="container-page py-20 sm:py-28">
-        <h2 className="font-display text-2xl italic sm:text-3xl">
-          {t("philosophyHeading")}
-        </h2>
+        <Reveal>
+          <h2 className="font-display text-2xl italic sm:text-3xl">
+            {t("philosophyHeading")}
+          </h2>
+        </Reveal>
         <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3">
           {philosophy.map((item, i) => (
-            <div key={item.title}>
+            <Reveal key={item.title} delay={i * 120}>
               <span className="text-sm text-muted">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="mt-3 font-display text-xl italic">{item.title}</h3>
               <p className="mt-2 text-sm text-muted">{item.text}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
 
       <section className="border-t border-foreground/10 bg-surface">
         <div className="container-page grid grid-cols-1 gap-10 py-20 sm:py-28 lg:grid-cols-2 lg:gap-20">
-          <div>
+          <Reveal>
             <h2 className="font-display text-2xl italic sm:text-3xl">
               {t("equipmentHeading")}
             </h2>
             <p className="mt-4 max-w-md text-muted">{t("equipmentText")}</p>
-          </div>
-          <div>
+          </Reveal>
+          <Reveal delay={150}>
             <h2 className="font-display text-2xl italic sm:text-3xl">
               {t("clientsHeading")}
             </h2>
@@ -114,7 +120,7 @@ export default async function AboutPage({
                 <li key={client}>{client}</li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </section>
     </div>
