@@ -40,12 +40,12 @@ export const works: Work[] = [
     category: { uk: "Пейзаж", en: "Landscape" },
     title: { uk: "Тихі години", en: "Silent Hours" },
     excerpt: {
-      uk: "Світанки та сутінки українських Карпат.",
-      en: "Dawns and dusks over the Ukrainian Carpathians.",
+      uk: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     description: {
-      uk: "Серія знята протягом трьох сезонів у Карпатах — момент, коли світло ледь торкається гір і все завмирає. Робота досліджує тишу як візуальну мову.",
-      en: "Shot across three seasons in the Carpathians, this series captures the moment light barely touches the mountains and everything holds still. The work explores silence as a visual language.",
+      uk: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     cover: { width: 1600, height: 2000 },
     gallery: [
@@ -74,12 +74,12 @@ export const works: Work[] = [
     category: { uk: "Портрет", en: "Portrait" },
     title: { uk: "Портрети бетону", en: "Concrete Portraits" },
     excerpt: {
-      uk: "Люди на тлі архітектури Києва.",
-      en: "People against Kyiv's architecture.",
+      uk: "Ut enim ad minim veniam, quis nostrud exercitation.",
+      en: "Ut enim ad minim veniam, quis nostrud exercitation.",
     },
     description: {
-      uk: "Проєкт про діалог між людиною і містом. Кожен портрет знятий на тлі модерністської архітектури, що формує характер моделі так само, як і навпаки.",
-      en: "A project about the dialogue between people and the city. Each portrait is framed against modernist architecture that shapes the subject's character as much as the reverse.",
+      uk: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      en: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     cover: { width: 1600, height: 2000 },
     gallery: [
@@ -104,12 +104,12 @@ export const works: Work[] = [
     category: { uk: "Пейзаж", en: "Landscape" },
     title: { uk: "Прибережне світло", en: "Coastal Light" },
     excerpt: {
-      uk: "Одеське узбережжя у різні пори року.",
-      en: "The Odesa coastline through the seasons.",
+      uk: "Duis aute irure dolor in reprehenderit in voluptate.",
+      en: "Duis aute irure dolor in reprehenderit in voluptate.",
     },
     description: {
-      uk: "Двохрічне спостереження за Чорним морем — від штормових зим до спекотних літ. Серія про мінливість світла на воді.",
-      en: "A two-year observation of the Black Sea — from stormy winters to hot summers. A series about the ever-changing light on water.",
+      uk: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      en: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
     cover: { width: 2000, height: 1333 },
     gallery: [
@@ -138,12 +138,12 @@ export const works: Work[] = [
     category: { uk: "Вулична фотографія", en: "Street" },
     title: { uk: "Монохромні вулиці", en: "Monochrome Streets" },
     excerpt: {
-      uk: "Чорно-біла вулична серія зі Львова.",
-      en: "A black-and-white street series from Lviv.",
+      uk: "Excepteur sint occaecat cupidatat non proident.",
+      en: "Excepteur sint occaecat cupidatat non proident.",
     },
     description: {
-      uk: "Прогулянки старим Львовом із камерою, зосереджені на контрасті світла й тіні, текстурі бруківки та ритмі повсякденного життя.",
-      en: "Walks through old Lviv with a camera, focused on the contrast of light and shadow, cobblestone texture, and the rhythm of everyday life.",
+      uk: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      en: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     cover: { width: 1600, height: 2000 },
     gallery: [
@@ -168,12 +168,12 @@ export const works: Work[] = [
     category: { uk: "Інтер'єр", en: "Interior" },
     title: { uk: "Тихі інтер'єри", en: "Quiet Interiors" },
     excerpt: {
-      uk: "Мінімалістичні простори та природне світло.",
-      en: "Minimalist spaces and natural light.",
+      uk: "Sed ut perspiciatis unde omnis iste natus error.",
+      en: "Sed ut perspiciatis unde omnis iste natus error.",
     },
     description: {
-      uk: "Дослідження порожніх кімнат, де головним героєм стає світло, що проходить крізь вікна. Серія знята для кількох архітектурних студій.",
-      en: "An exploration of empty rooms where the protagonist is the light passing through the windows. Shot for several architecture studios.",
+      uk: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem.",
+      en: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem.",
     },
     cover: { width: 2000, height: 1333 },
     gallery: [
