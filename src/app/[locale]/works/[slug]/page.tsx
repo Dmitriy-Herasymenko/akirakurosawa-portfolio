@@ -84,7 +84,7 @@ export default async function WorkPage({
             <p className="text-xs uppercase tracking-[0.3em] text-muted">
               {work.category[loc]}
             </p>
-            <h1 className="mt-3 font-display text-4xl italic sm:text-6xl">
+            <h1 className="mt-3 font-display text-4xl sm:text-6xl">
               {work.title[loc]}
             </h1>
           </div>
@@ -132,7 +132,7 @@ export default async function WorkPage({
             <p className="text-xs uppercase tracking-[0.3em] text-muted">
               {t("nextProject")}
             </p>
-            <h2 className="mt-3 font-display text-3xl italic transition-transform group-hover:translate-x-2 sm:text-5xl">
+            <h2 className="mt-3 font-display text-3xl transition-transform group-hover:translate-x-2 sm:text-5xl">
               {nextWork.title[loc]}
             </h2>
           </div>

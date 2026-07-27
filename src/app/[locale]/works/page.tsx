@@ -33,7 +33,7 @@ export default async function WorksPage({
     <div className="container-page py-16 sm:py-24">
       <Reveal className="max-w-2xl">
         <Kicker>{t("kicker")}</Kicker>
-        <h1 className="mt-3 font-display text-4xl italic sm:text-5xl">
+        <h1 className="mt-3 font-display text-4xl sm:text-5xl">
           {t("heading")}
         </h1>
         <p className="mt-5 text-muted">{t("intro")}</p>

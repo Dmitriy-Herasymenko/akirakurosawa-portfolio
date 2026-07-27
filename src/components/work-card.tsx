@@ -32,7 +32,7 @@ export function WorkCard({
         />
         <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/10" />
         {typeof index === "number" && (
-          <span className="absolute left-4 top-4 font-display text-sm italic text-white/80 mix-blend-difference">
+          <span className="absolute left-4 top-4 font-display text-sm text-white/80 mix-blend-difference">
             {String(index + 1).padStart(2, "0")}
           </span>
         )}
@@ -42,7 +42,7 @@ export function WorkCard({
       </div>
       <div className="mt-4 flex items-start justify-between gap-4">
         <div>
-          <h3 className="font-display text-xl italic">{work.title[locale]}</h3>
+          <h3 className="font-display text-xl">{work.title[locale]}</h3>
           <p className="mt-1 text-sm text-muted">{work.category[locale]}</p>
         </div>
         <span className="mt-1 shrink-0 text-sm text-muted">{work.year}</span>

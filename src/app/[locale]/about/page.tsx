@@ -48,7 +48,7 @@ export default async function AboutPage({
       <section className="container-page grid grid-cols-1 gap-10 pt-16 sm:pt-24 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <Kicker>{t("kicker")}</Kicker>
-          <h1 className="mt-3 font-display text-4xl italic sm:text-6xl">
+          <h1 className="mt-3 font-display text-4xl sm:text-6xl">
             {t("heading")}
           </h1>
           <p className="mt-2 text-muted">{t("role")}</p>
@@ -85,7 +85,7 @@ export default async function AboutPage({
 
       <section className="container-page py-20 sm:py-28">
         <Reveal>
-          <h2 className="font-display text-2xl italic sm:text-3xl">
+          <h2 className="font-display text-2xl sm:text-3xl">
             {t("philosophyHeading")}
           </h2>
         </Reveal>
@@ -95,7 +95,7 @@ export default async function AboutPage({
               <span className="text-sm text-muted">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-3 font-display text-xl italic">{item.title}</h3>
+              <h3 className="mt-3 font-display text-xl">{item.title}</h3>
               <p className="mt-2 text-sm text-muted">{item.text}</p>
             </Reveal>
           ))}
@@ -105,13 +105,13 @@ export default async function AboutPage({
       <section className="border-t border-foreground/10 bg-surface">
         <div className="container-page grid grid-cols-1 gap-10 py-20 sm:py-28 lg:grid-cols-2 lg:gap-20">
           <Reveal>
-            <h2 className="font-display text-2xl italic sm:text-3xl">
+            <h2 className="font-display text-2xl sm:text-3xl">
               {t("equipmentHeading")}
             </h2>
             <p className="mt-4 max-w-md text-muted">{t("equipmentText")}</p>
           </Reveal>
           <Reveal delay={150}>
-            <h2 className="font-display text-2xl italic sm:text-3xl">
+            <h2 className="font-display text-2xl sm:text-3xl">
               {t("clientsHeading")}
             </h2>
             <ul className="mt-4 flex flex-col gap-2 text-muted">

@@ -34,7 +34,7 @@ export default async function ContactPage({
     <div className="container-page grid grid-cols-1 gap-14 py-16 sm:py-24 lg:grid-cols-2 lg:gap-24">
       <Reveal>
         <Kicker>{t("kicker")}</Kicker>
-        <h1 className="mt-3 font-display text-4xl italic sm:text-6xl">
+        <h1 className="mt-3 font-display text-4xl sm:text-6xl">
           {t("heading")}
         </h1>
         <p className="mt-5 max-w-md text-muted">{t("intro")}</p>

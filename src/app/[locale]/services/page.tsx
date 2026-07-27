@@ -42,7 +42,7 @@ export default async function ServicesPage({
       <section className="container-page pt-16 sm:pt-24">
         <Reveal className="max-w-2xl">
           <Kicker>{t("kicker")}</Kicker>
-          <h1 className="mt-3 font-display text-4xl italic sm:text-6xl">
+          <h1 className="mt-3 font-display text-4xl sm:text-6xl">
             {t("heading")}
           </h1>
           <p className="mt-5 text-muted">{t("intro")}</p>
@@ -63,7 +63,7 @@ export default async function ServicesPage({
         <div className="container-page py-20 sm:py-28">
           <Reveal className="max-w-2xl">
             <Kicker>{t("faqKicker")}</Kicker>
-            <h2 className="mt-3 font-display text-3xl italic sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl sm:text-4xl">
               {t("faqHeading")}
             </h2>
           </Reveal>

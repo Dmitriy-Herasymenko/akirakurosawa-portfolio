@@ -54,7 +54,7 @@ function AccordionItem({
           <span className="text-sm text-muted">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <span className="font-display text-xl italic sm:text-2xl">
+          <span className="font-display text-xl sm:text-2xl">
             {question}
           </span>
         </span>

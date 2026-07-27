@@ -26,7 +26,6 @@ export default async function Image() {
         <div
           style={{
             fontSize: 96,
-            fontStyle: "italic",
             marginTop: 24,
             display: "flex",
           }}

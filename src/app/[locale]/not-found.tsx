@@ -6,7 +6,7 @@ export default function NotFound() {
 
   return (
     <div className="container-page flex min-h-[60vh] flex-col items-center justify-center text-center">
-      <h1 className="font-display text-5xl italic">404</h1>
+      <h1 className="font-display text-5xl">404</h1>
       <p className="mt-4 text-xl">{t("heading")}</p>
       <p className="mt-2 text-muted">{t("text")}</p>
       <Link

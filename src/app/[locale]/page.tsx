@@ -49,7 +49,7 @@ export default async function HomePage({
           <p className="animate-fade-in text-xs uppercase tracking-[0.3em] opacity-80">
             {t("kicker")}
           </p>
-          <h1 className="animate-fade-in mt-6 max-w-3xl text-balance font-display text-4xl italic leading-[1.05] sm:text-6xl lg:text-7xl">
+          <h1 className="animate-fade-in mt-6 max-w-3xl text-balance font-display text-4xl leading-[1.05] sm:text-6xl lg:text-7xl">
             {t("heading")
               .split("\n")
               .map((line, i) => (
@@ -77,7 +77,7 @@ export default async function HomePage({
         <Reveal className="mb-12 flex flex-col justify-between gap-4 sm:mb-16 sm:flex-row sm:items-end">
           <div>
             <Kicker>{t("featuredKicker")}</Kicker>
-            <h2 className="mt-3 font-display text-3xl italic sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl sm:text-4xl">
               {t("cta")}
             </h2>
           </div>
@@ -117,7 +117,7 @@ export default async function HomePage({
           </Reveal>
           <Reveal delay={150} className="flex flex-col justify-center">
             <Kicker>{t("aboutKicker")}</Kicker>
-            <h2 className="mt-3 font-display text-3xl italic sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl sm:text-4xl">
               {t("aboutHeading")}
             </h2>
             <p className="mt-6 max-w-md text-muted">{t("aboutText")}</p>
@@ -138,7 +138,7 @@ export default async function HomePage({
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
             {t("contactKicker")}
           </div>
-          <h2 className="mx-auto mt-4 max-w-2xl text-balance font-display text-3xl italic sm:text-5xl">
+          <h2 className="mx-auto mt-4 max-w-2xl text-balance font-display text-3xl sm:text-5xl">
             {t("contactHeading")}
           </h2>
           <p className="mx-auto mt-4 max-w-md text-muted">{t("contactText")}</p>

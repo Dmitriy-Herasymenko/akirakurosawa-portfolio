@@ -20,7 +20,7 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
         </span>
       )}
 
-      <h3 className="font-display text-2xl italic sm:text-3xl">
+      <h3 className="font-display text-2xl sm:text-3xl">
         {tier.name[locale]}
       </h3>
       <p
@@ -32,7 +32,7 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
       </p>
 
       <div className="mt-8 flex items-baseline gap-2">
-        <span className="font-display text-4xl italic sm:text-5xl">
+        <span className="font-display text-4xl sm:text-5xl">
           {tier.price[locale]}
         </span>
         <span

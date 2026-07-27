@@ -11,7 +11,7 @@ export function Marquee({ items }: MarqueeProps) {
         {track.map((item, i) => (
           <span
             key={`${item}-${i}`}
-            className="flex items-center gap-10 font-display text-xl italic text-muted sm:text-2xl"
+            className="flex items-center gap-10 font-display text-xl text-muted sm:text-2xl"
           >
             {item}
             <span aria-hidden="true" className="text-accent">
