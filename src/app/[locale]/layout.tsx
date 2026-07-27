@@ -1,30 +1,13 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { Inter, Instrument_Serif } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { ThemeProvider, themeInitScript } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { JsonLd } from "@/components/json-ld";
+import { LangSync } from "@/components/lang-sync";
 import { siteConfig } from "@/lib/site-config";
-import "../globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin", "cyrillic"],
-  display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  display: "swap",
-});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -39,11 +22,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "metadata.home" });
 
   return {
-    metadataBase: new URL(siteConfig.url),
-    title: {
-      default: t("title"),
-      template: `%s — ${siteConfig.name}`,
-    },
+    title: t("title"),
     description: t("description"),
     alternates: {
       canonical: locale === routing.defaultLocale ? "/" : `/${locale}`,
@@ -72,10 +51,6 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
     },
-    icons: {
-      icon: "/favicon.ico",
-    },
-    manifest: "/manifest.webmanifest",
   };
 }
 
@@ -115,35 +90,21 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html
-      lang={locale}
-      suppressHydrationWarning
-      className={`${inter.variable} ${instrumentSerif.variable} h-full antialiased`}
-    >
-      <body className="flex min-h-full flex-col bg-background text-foreground">
-        <Script
-          id="theme-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: themeInitScript }}
-        />
-        <ThemeProvider>
-          <NextIntlClientProvider>
-            <a
-              href="#main"
-              className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-foreground focus:px-4 focus:py-2 focus:text-background"
-            >
-              Skip to content
-            </a>
-            <div id="top" />
-            <Header />
-            <main id="main" className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </NextIntlClientProvider>
-        </ThemeProvider>
-        <JsonLd data={personJsonLd} />
-      </body>
-    </html>
+    <NextIntlClientProvider>
+      <LangSync />
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-foreground focus:px-4 focus:py-2 focus:text-background"
+      >
+        Skip to content
+      </a>
+      <div id="top" />
+      <Header />
+      <main id="main" className="flex-1">
+        {children}
+      </main>
+      <Footer />
+      <JsonLd data={personJsonLd} />
+    </NextIntlClientProvider>
   );
 }
