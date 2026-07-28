@@ -104,21 +104,22 @@ export default async function WorkPage({
         </p>
       </header>
 
-      <div className="container-page mt-16 flex flex-col gap-6 pb-24 sm:mt-20 sm:gap-10 sm:pb-32">
+      <div className="container-page mt-16 flex flex-col gap-10 pb-24 sm:mt-20 sm:gap-16 sm:pb-32">
         {work.gallery.map((image, i) => (
-          <div
-            key={image.src}
-            className="relative w-full overflow-hidden bg-surface"
-            style={{ aspectRatio: `${image.width} / ${image.height}` }}
-          >
-            <Image
-              src={image.src}
-              alt={image.alt[loc]}
-              fill
-              priority={i === 0}
-              sizes="(min-width: 1024px) 90vw, 100vw"
-              className="object-cover"
-            />
+          <div key={image.src} className="photo-frame mx-auto w-full sm:w-[85%]">
+            <div
+              className="relative w-full overflow-hidden bg-surface"
+              style={{ aspectRatio: `${image.width} / ${image.height}` }}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt[loc]}
+                fill
+                priority={i === 0}
+                sizes="(min-width: 1024px) 90vw, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         ))}
       </div>

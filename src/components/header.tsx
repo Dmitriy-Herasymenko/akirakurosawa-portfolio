@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { NavLink } from "@/components/nav-link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleSwitcher } from "@/components/locale-switcher";
-import { siteConfig } from "@/lib/site-config";
+import { Logo } from "@/components/logo";
 
 const links = [
   { href: "/" as const, key: "home" },
@@ -23,13 +22,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-foreground/0 bg-background/80 backdrop-blur supports-backdrop-blur:bg-background/60">
       <div className="container-page flex h-16 items-center justify-between sm:h-20">
-        <Link
-          href="/"
-          className="font-display text-lg tracking-tight sm:text-xl"
-          onClick={() => setOpen(false)}
-        >
-          {siteConfig.name}
-        </Link>
+        <Logo onClick={() => setOpen(false)} />
 
         <nav className="hidden items-center gap-8 text-sm md:flex">
           {links.map((link) => (

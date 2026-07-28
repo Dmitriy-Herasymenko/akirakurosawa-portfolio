@@ -51,7 +51,7 @@ export function WorksFilter({ works }: { works: Work[] }) {
       {filtered.length > 0 ? (
         <div
           key={active}
-          className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+          className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:gap-12"
         >
           {filtered.map((work, i) => (
             <div

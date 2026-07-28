@@ -28,7 +28,7 @@ export default async function HomePage({
   setRequestLocale(locale);
 
   const t = await getTranslations("home");
-  const featured = works.slice(0, 3);
+  const featured = works.slice(0, 4);
   const marqueeItems = t.raw("marquee") as string[];
   const stats = t.raw("stats") as { value: string; label: string }[];
 
@@ -90,7 +90,7 @@ export default async function HomePage({
           </Link>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:gap-12">
           {featured.map((work, i) => (
             <Reveal key={work.slug} delay={i * 120}>
               <WorkCard work={work} priority={i === 0} index={i} />
