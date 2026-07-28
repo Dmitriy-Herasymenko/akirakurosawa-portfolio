@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { WorkCard } from "@/components/work-card";
 import { Reveal } from "@/components/reveal";
 import { Kicker } from "@/components/kicker";
+import { WorksFilter } from "@/components/works-filter";
 import { works } from "@/lib/works";
 import { buildAlternates } from "@/lib/seo";
 
@@ -39,12 +39,8 @@ export default async function WorksPage({
         <p className="mt-5 text-muted">{t("intro")}</p>
       </Reveal>
 
-      <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-        {works.map((work, i) => (
-          <Reveal key={work.slug} delay={(i % 3) * 100}>
-            <WorkCard work={work} priority={i < 2} index={i} />
-          </Reveal>
-        ))}
+      <div className="mt-12">
+        <WorksFilter works={works} />
       </div>
     </div>
   );

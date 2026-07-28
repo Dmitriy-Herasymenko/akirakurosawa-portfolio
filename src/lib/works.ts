@@ -9,6 +9,7 @@ export type Work = {
   slug: string;
   seed: string;
   year: number;
+  categorySlug: string;
   category: { uk: string; en: string };
   title: { uk: string; en: string };
   excerpt: { uk: string; en: string };
@@ -37,6 +38,7 @@ export const works: Work[] = [
     slug: "silent-hours",
     seed: "silent-hours",
     year: 2025,
+    categorySlug: "landscape",
     category: { uk: "Пейзаж", en: "Landscape" },
     title: { uk: "Тихі години", en: "Silent Hours" },
     excerpt: {
@@ -71,6 +73,7 @@ export const works: Work[] = [
     slug: "concrete-portraits",
     seed: "concrete-portraits",
     year: 2024,
+    categorySlug: "portrait",
     category: { uk: "Портрет", en: "Portrait" },
     title: { uk: "Портрети бетону", en: "Concrete Portraits" },
     excerpt: {
@@ -101,6 +104,7 @@ export const works: Work[] = [
     slug: "coastal-light",
     seed: "coastal-light",
     year: 2024,
+    categorySlug: "landscape",
     category: { uk: "Пейзаж", en: "Landscape" },
     title: { uk: "Прибережне світло", en: "Coastal Light" },
     excerpt: {
@@ -135,6 +139,7 @@ export const works: Work[] = [
     slug: "monochrome-streets",
     seed: "monochrome-streets",
     year: 2023,
+    categorySlug: "street",
     category: { uk: "Вулична фотографія", en: "Street" },
     title: { uk: "Монохромні вулиці", en: "Monochrome Streets" },
     excerpt: {
@@ -165,6 +170,7 @@ export const works: Work[] = [
     slug: "quiet-interiors",
     seed: "quiet-interiors",
     year: 2023,
+    categorySlug: "interior",
     category: { uk: "Інтер'єр", en: "Interior" },
     title: { uk: "Тихі інтер'єри", en: "Quiet Interiors" },
     excerpt: {

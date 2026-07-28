@@ -36,14 +36,15 @@ export default async function HomePage({
     <div>
       <section className="relative flex min-h-[calc(100svh-4rem)] items-end overflow-hidden sm:min-h-[calc(100svh-5rem)]">
         <Image
-          src="https://images.unsplash.com/photo-1676304917549-5c42b40779a2?auto=format&fit=crop&w=2400&q=80"
+          src="https://images.unsplash.com/photo-1549981832-2ba2ee913334?auto=format&fit=crop&w=2400&q=80"
           alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/20 mix-blend-overlay" />
 
         <div className="container-page relative z-10 pb-16 pt-40 text-white sm:pb-24">
           <p className="animate-fade-in text-xs uppercase tracking-[0.3em] opacity-80">
@@ -104,7 +105,7 @@ export default async function HomePage({
         </Reveal>
       </section>
 
-      <section className="border-t border-foreground/10 bg-surface">
+      <section className="surface-gradient border-t border-foreground/10">
         <div className="container-page grid grid-cols-1 gap-10 py-20 sm:py-28 lg:grid-cols-2 lg:gap-20">
           <Reveal className="relative aspect-[4/5] overflow-hidden">
             <Image
@@ -133,22 +134,25 @@ export default async function HomePage({
       </section>
 
       <Reveal>
-        <section className="container-page py-24 text-center sm:py-32">
-          <div className="mx-auto flex w-fit items-center gap-2 text-xs uppercase tracking-[0.3em] text-muted">
-            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-            {t("contactKicker")}
+        <section className="relative overflow-hidden py-24 text-center sm:py-32">
+          <div className="glow-accent absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2" />
+          <div className="container-page relative">
+            <div className="mx-auto flex w-fit items-center gap-2 text-xs uppercase tracking-[0.3em] text-muted">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+              {t("contactKicker")}
+            </div>
+            <h2 className="mx-auto mt-4 max-w-2xl text-balance font-display text-3xl sm:text-5xl">
+              {t("contactHeading")}
+            </h2>
+            <p className="mx-auto mt-4 max-w-md text-muted">{t("contactText")}</p>
+            <Link
+              href="/contact"
+              className="mt-8 inline-flex items-center gap-2 border-b border-current pb-1 text-sm tracking-wide"
+            >
+              {t("contactCta")}
+              <span aria-hidden="true">→</span>
+            </Link>
           </div>
-          <h2 className="mx-auto mt-4 max-w-2xl text-balance font-display text-3xl sm:text-5xl">
-            {t("contactHeading")}
-          </h2>
-          <p className="mx-auto mt-4 max-w-md text-muted">{t("contactText")}</p>
-          <Link
-            href="/contact"
-            className="mt-8 inline-flex items-center gap-2 border-b border-current pb-1 text-sm tracking-wide"
-          >
-            {t("contactCta")}
-            <span aria-hidden="true">→</span>
-          </Link>
         </section>
       </Reveal>
     </div>

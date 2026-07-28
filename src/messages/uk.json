@@ -86,7 +86,10 @@
     "back": "Усі роботи",
     "nextProject": "Наступний проєкт",
     "year": "Рік",
-    "category": "Категорія"
+    "category": "Категорія",
+    "filterLabel": "Фільтр за категорією",
+    "allCategories": "Усі",
+    "emptyState": "У цій категорії поки немає робіт."
   },
   "about": {
     "kicker": "Про мене",

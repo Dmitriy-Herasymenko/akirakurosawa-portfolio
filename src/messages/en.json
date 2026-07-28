@@ -86,7 +86,10 @@
     "back": "All works",
     "nextProject": "Next project",
     "year": "Year",
-    "category": "Category"
+    "category": "Category",
+    "filterLabel": "Filter by category",
+    "allCategories": "All",
+    "emptyState": "No works in this category yet."
   },
   "about": {
     "kicker": "About",

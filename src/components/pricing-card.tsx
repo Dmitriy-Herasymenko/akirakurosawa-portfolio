@@ -8,9 +8,9 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
 
   return (
     <div
-      className={`relative flex flex-col p-8 sm:p-10 ${
+      className={`relative flex flex-col overflow-hidden p-8 sm:p-10 ${
         tier.featured
-          ? "bg-foreground text-background"
+          ? "featured-gradient text-background"
           : "border border-foreground/15"
       }`}
     >

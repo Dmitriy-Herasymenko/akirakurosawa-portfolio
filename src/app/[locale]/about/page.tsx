@@ -48,7 +48,7 @@ export default async function AboutPage({
       <section className="container-page grid grid-cols-1 gap-10 pt-16 sm:pt-24 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <Kicker>{t("kicker")}</Kicker>
-          <h1 className="mt-3 font-display text-4xl sm:text-6xl">
+          <h1 className="text-gradient mt-3 font-display text-4xl sm:text-6xl">
             {t("heading")}
           </h1>
           <p className="mt-2 text-muted">{t("role")}</p>

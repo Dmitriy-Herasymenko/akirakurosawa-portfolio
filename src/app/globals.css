@@ -120,7 +120,7 @@ body {
 }
 
 .animate-marquee {
-  animation: marquee 28s linear infinite;
+  animation: marquee var(--marquee-duration, 28s) linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -133,6 +133,93 @@ a {
   text-underline-offset: 4px;
 }
 
+button:not(:disabled),
+[role="button"]:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
 img {
   -webkit-user-drag: none;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--foreground) 20%,
+    var(--accent) 60%,
+    var(--foreground) 90%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.glow-accent {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-accent::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: -1;
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklab, var(--accent) 35%, transparent),
+    transparent 70%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, var(--accent) 60%, transparent) 50%,
+    transparent
+  );
+  border: none;
+}
+
+.mask-fade-x {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.featured-gradient {
+  background: linear-gradient(
+    155deg,
+    var(--foreground) 0%,
+    color-mix(in oklab, var(--foreground) 82%, var(--accent) 18%) 60%,
+    color-mix(in oklab, var(--foreground) 70%, var(--accent) 30%) 100%
+  );
+}
+
+.surface-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--surface) 0%,
+    color-mix(in oklab, var(--surface) 80%, var(--accent) 6%) 100%
+  );
 }

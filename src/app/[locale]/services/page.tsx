@@ -39,8 +39,9 @@ export default async function ServicesPage({
 
   return (
     <div>
-      <section className="container-page pt-16 sm:pt-24">
-        <Reveal className="max-w-2xl">
+      <section className="relative container-page overflow-hidden pt-16 sm:pt-24">
+        <div className="glow-accent absolute -left-10 top-0 h-32 w-32" />
+        <Reveal className="relative max-w-2xl">
           <Kicker>{t("kicker")}</Kicker>
           <h1 className="mt-3 font-display text-4xl sm:text-6xl">
             {t("heading")}
@@ -59,7 +60,8 @@ export default async function ServicesPage({
         </div>
       </section>
 
-      <section className="border-t border-foreground/10 bg-surface">
+      <div className="divider-gradient" />
+      <section className="surface-gradient">
         <div className="container-page py-20 sm:py-28">
           <Reveal className="max-w-2xl">
             <Kicker>{t("faqKicker")}</Kicker>
