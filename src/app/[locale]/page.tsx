@@ -90,9 +90,13 @@ export default async function HomePage({
           </Link>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:gap-12">
+        <div className="columns-1 gap-3 sm:columns-2 lg:gap-4">
           {featured.map((work, i) => (
-            <Reveal key={work.slug} delay={i * 120}>
+            <Reveal
+              key={work.slug}
+              delay={i * 120}
+              className="mb-3 break-inside-avoid lg:mb-4"
+            >
               <WorkCard work={work} priority={i === 0} index={i} />
             </Reveal>
           ))}

@@ -51,12 +51,12 @@ export function WorksFilter({ works }: { works: Work[] }) {
       {filtered.length > 0 ? (
         <div
           key={active}
-          className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:gap-12"
+          className="mt-16 columns-1 gap-3 sm:columns-2 lg:gap-4"
         >
           {filtered.map((work, i) => (
             <div
               key={work.slug}
-              className="animate-fade-in"
+              className="animate-fade-in mb-3 break-inside-avoid lg:mb-4"
               style={{ animationDelay: `${(i % 6) * 60}ms` }}
             >
               <WorkCard work={work} priority={i < 2} index={i} />

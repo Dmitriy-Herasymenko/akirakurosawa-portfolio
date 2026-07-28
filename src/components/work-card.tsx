@@ -22,7 +22,10 @@ export function WorkCard({
       className="group block"
     >
       <div className="photo-frame">
-        <div className="relative aspect-[4/5] w-full overflow-hidden bg-surface">
+        <div
+          className="relative w-full overflow-hidden bg-surface"
+          style={{ aspectRatio: `${work.cover.width} / ${work.cover.height}` }}
+        >
           <Image
             src={cover.src}
             alt={cover.alt[locale]}
@@ -42,14 +45,10 @@ export function WorkCard({
           </span>
         </div>
       </div>
-      <div className="mt-4 flex items-start justify-between gap-4">
-        <div>
-          <h3 className="font-display text-xl">{work.title[locale]}</h3>
-          <p className="mt-1 text-sm text-muted">{work.category[locale]}</p>
-        </div>
-        <span className="mt-1 shrink-0 text-sm text-muted">{work.year}</span>
-      </div>
-      <span className="sr-only">{t("viewProject")}</span>
+      <span className="sr-only">
+        {work.title[locale]} — {work.category[locale]}, {work.year}.{" "}
+        {t("viewProject")}
+      </span>
     </Link>
   );
 }
