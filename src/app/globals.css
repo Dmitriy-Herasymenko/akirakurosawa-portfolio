@@ -32,8 +32,8 @@
   --color-muted: var(--muted);
   --color-surface: var(--surface);
   --color-accent: var(--accent);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-display);
+  --font-sans: var(--font-futura);
+  --font-display: var(--font-futura);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -76,6 +76,7 @@ body {
 
 .font-display {
   font-family: var(--font-display);
+  font-weight: 700;
 }
 
 .container-page {

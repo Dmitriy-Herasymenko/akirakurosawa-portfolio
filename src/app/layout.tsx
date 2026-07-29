@@ -1,23 +1,31 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Instrument_Serif } from "next/font/google";
+import localFont from "next/font/local";
 import { ThemeProvider, themeInitScript } from "@/components/theme-provider";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin", "cyrillic"],
+const futura = localFont({
+  variable: "--font-futura",
   display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal"],
-  display: "swap",
+  src: [
+    {
+      path: "../fonts/futura-pt/FuturaCyrillicBook.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/futura-pt/FuturaCyrillicMedium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/futura-pt/FuturaCyrillicBold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -41,7 +49,7 @@ export default function RootLayout({
     <html
       lang={routing.defaultLocale}
       suppressHydrationWarning
-      className={`${inter.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${futura.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <Script
